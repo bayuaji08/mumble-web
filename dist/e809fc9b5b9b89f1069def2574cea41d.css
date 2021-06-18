@@ -48,7 +48,7 @@ html, body {
 
 .log {
   background-color: #fff;
-  height: calc(100% - 42px);
+  height: calc(98% - 6px);
   padding: 5px;
   border: 1px #d3d3d3 solid;
   border-radius: 3px;

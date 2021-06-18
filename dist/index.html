@@ -494,11 +494,6 @@
                                            click: connectDialog.show"
                       rel="connect" src="22ecf0ecde1ae2a6281265174b7fa355.svg"
                       title="Connect to Server" alt="Connection">
-        <img class="tb-information" rel="information" src="82747b4bbd0cfe92292f74cd27f2763e.svg"
-             data-bind="click: connectionInfo.show,
-                        css: { disabled: !thisUser() }"
-                        title="Information" alt="Information">
-        <div class="divider"></div>
         <img class="tb-mute" data-bind="visible: !selfMute(),
                               click: function () { requestMute(thisUser()) }"
                       rel="mute" src="8f75583a16890ab851fc3f121fc63f89.svg"
@@ -515,18 +510,9 @@
                               click: function () { requestUndeaf(thisUser()) }"
                       rel="undeaf" src="d5ba30b381ebc262ba3871eaed9d7102.svg"
                       title="Undeafen" alt="Undeafen">
-        <img class="tb-record" data-bind="click: function(){}"
-                      rel="record" src="7b86c879d50808c66816ed3338f26557.svg"
-                      title="Record" alt="Record">
-        <div class="divider"></div>
-        <img class="tb-comment" data-bind="click: commentDialog.show"
-                      rel="comment" src="077f1c5bd335be073c48c340b01f58bc.svg"
-                      title="Comment" alt="Comment">
-        <div class="divider"></div>
         <img class="tb-settings" data-bind="click: openSettings"
                       rel="settings" src="50dddae19e7bf601b168f46a1303674b.svg"
                       title="Settings" alt="Settings">
-        <div class="divider"></div>
       </div>
       <div class="chat">
         <script type="text/html" id="log-generic">
@@ -563,12 +549,6 @@
             <!-- /ko -->
           </div>
         </div>
-        <form data-bind="submit: submitMessageBox">
-          <textarea id="message-box" row=1 data-bind="
-              attr: { placeholder: messageBoxHint }, 
-              textInput: messageBox, 
-              event: {keypress: submitOnEnter}"></textarea>
-        </form>
       </div>
       <script type="text/html" id="channel">
         <div class="channel" data-bind="
