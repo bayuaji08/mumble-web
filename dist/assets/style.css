@@ -4,6 +4,7 @@
 }
 .container{
     display: flex;
+    background-color: #ffffff;
     width: 100vw;
     height: 100vh;
     justify-content: center;
@@ -292,10 +293,12 @@ input::placeholder{
 @media screen and (max-width:  800px) {
     .container {
         display: block;
+        height: 100%;
     }
     .container .left {
         width: 100%;
         /* margin-top: 550px; */
+        display: none;
     }
     .login-container {
         width: 
