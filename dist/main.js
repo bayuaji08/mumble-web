@@ -1,27 +1,26 @@
 const rmCheck = document.getElementById("rememberMe"),
-    emailInput = document.getElementById("username");
-    console.log(rmCheck.value);
+    usernameInput = document.getElementById("username"),
+    passwordInput = document.getElementById("password");
 
-// if (localStorage.checkbox && localStorage.checkbox !== "") {
-//   rmCheck.setAttribute("checked", "checked");
-//   emailInput.value = localStorage.username;
-//   console.log('ok1');
-// } else {
-//   rmCheck.removeAttribute("checked");
-//   emailInput.value = "";
-//   console.log('ok2');
-// }
+if (localStorage.checkbox && localStorage.checkbox !== "") {
+  rmCheck.setAttribute("checked", "checked");
+  config.defaults.username = localStorage.username;
+  config.defaults.password = localStorage.password;
+} else {
+  rmCheck.removeAttribute("checked");
+  config.defaults.username = "";
+  config.defaults.password = "";
+}
 
-// function lsRememberMe() {
+function lsRememberMe() {
 
-//   if (rmCheck.checked && emailInput.value !== "") {
-//     localStorage.username = emailInput.value;
-//     localStorage.checkbox = rmCheck.value;
-//     console.log('ok3');
-//   } else {
-//     localStorage.username = "";
-//     localStorage.checkbox = "";
-//     console.log('ok4');
-
-//   }
-// }
+  if (rmCheck.checked && usernameInput.value !== "") {
+    localStorage.username = usernameInput.value;
+    localStorage.password = passwordInput.value;
+    localStorage.checkbox = rmCheck.value;
+  } else {
+    localStorage.username = "";
+    localStorage.password = "";
+    localStorage.checkbox = "";
+  }
+}
